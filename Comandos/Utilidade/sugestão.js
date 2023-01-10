@@ -25,7 +25,7 @@ module.exports = {
         ], ephemeral: true
       })
     } else {
-      let sugestao = interaction.options.getString("sugestão");
+      let sugestao = interaction.options.getString("sugestão"); //oi
       canal.send({
         embeds: [
           new CorsinhaEmbed({
@@ -42,7 +42,5 @@ module.exports = {
         interaction.reply({ content: `Ops ${interaction.user}, algo deu errado!` })
       })
     }
-
-
   }
 }
