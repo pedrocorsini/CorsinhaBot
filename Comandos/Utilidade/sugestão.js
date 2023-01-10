@@ -16,8 +16,8 @@ module.exports = {
   ],
 
   run: async (client, interaction) => {
-
     let canal = interaction.guild.channels.cache.get("722586465707491333") // Canal de sugestões do servidor
+<<<<<<< HEAD
     if (!canal) {
       interaction.reply({
         content: "", embeds: [
@@ -26,6 +26,11 @@ module.exports = {
       })
     } else {
       let sugestao = interaction.options.getString("sugestão"); //oi
+=======
+
+    if (canal) {
+          let sugestao = interaction.options.getString("sugestão");
+>>>>>>> c57333affb9a2842910166c638b34d4c5f18eaeb
       canal.send({
         embeds: [
           new CorsinhaEmbed({
@@ -41,6 +46,13 @@ module.exports = {
       }).catch(() => {
         interaction.reply({ content: `Ops ${interaction.user}, algo deu errado!` })
       })
+    } else {
+        interaction.reply({
+        content: "", embeds: [
+          new CorsinhaEmbed({ author: interaction.user.username, description: `Olá ${interaction.user}, o canal de sugestões ainda não foi configurado no script!`, }).embed
+        ], ephemeral: true
+      })
+
     }
   }
 }
