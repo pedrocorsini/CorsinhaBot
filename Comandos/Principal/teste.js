@@ -8,10 +8,10 @@ module.exports = {
 
   run: async (client, interaction) => {
     const embed = new Discord.EmbedBuilder()
-    .setTitle('teste')
-    .setDescription('o leo é gay')
-    .setFooter({ text: 'Gay' })
-    .setColor("Random")
+      .setTitle('teste')
+      .setDescription('o leo é gay')
+      .setFooter({ text: 'Gay' })
+      .setColor("Random")
 
     interaction.reply({ embeds: [embed] })
 
